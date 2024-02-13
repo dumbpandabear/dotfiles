@@ -1,7 +1,7 @@
 ve_config_reload: true
 
 window:
-  opacity: 0.85
+  opacity: 0.95
   padding:
     x: 18
     y: 16
