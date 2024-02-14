@@ -36,11 +36,12 @@ return require('packer').startup(function(use)
     }
     use {
         "rebelot/kanagawa.nvim",
-        as = "kanagawa",
         config = function ()
             require('kanagawa').setup({
-                terminalColors = true,
                 transparent = true,
+                colors = {
+                    theme = { all = { ui = { bg_gutter = 'none' }  }}
+                }
             })
         end
     }
@@ -86,6 +87,12 @@ return require('packer').startup(function(use)
             vim.o.timeout = true
             vim.o.timeoutlen = 300
             require("which-key").setup()
+        end
+    }
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
         end
     }
 end)
