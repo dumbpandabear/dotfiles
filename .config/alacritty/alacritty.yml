@@ -1,23 +1,26 @@
 ve_config_reload: true
 
+env:
+  TERM: xterm-256color
+
 window:
   opacity: 0.95
   padding:
     x: 18
-    y: 16
+    y: 10
   dynamic_padding: false
-  decorations: buttonless
+  decorations: none
 
 font:
   normal:
     family: "SFMono Nerd Font"
     style: Regular
-  size: 22.0
+  size: 18.0
   use_thin_strokes: true
 
 colors:
   primary:
-    background: "#2e3440"
+    background: "#252932"
     foreground: "#d8dee9"
     dim_foreground: "#a5abb6"
   cursor:
