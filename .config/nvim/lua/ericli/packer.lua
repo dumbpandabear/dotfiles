@@ -89,10 +89,13 @@ return require('packer').startup(function(use)
             require("which-key").setup()
         end
     }
-    use {
-        'numToStr/Comment.nvim',
+    -- TMUX + Nvim --
+    use{
+        "aserowy/tmux.nvim",
         config = function()
-            require('Comment').setup()
+            require("tmux").setup()
         end
     }
+
 end)
+

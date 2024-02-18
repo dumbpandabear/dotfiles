@@ -1,14 +1,14 @@
 local lsp = require("lsp-zero")
-
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
   'lua_ls',
   'rust_analyzer',
+  'clangd',
 })
 
--- Fix Undefined global 'vim'
 lsp.configure('lua_ls', {
     settings = {
         Lua = {
