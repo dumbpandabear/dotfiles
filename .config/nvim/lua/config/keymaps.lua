@@ -72,4 +72,4 @@ vim.keymap.set("n", "<leader><space>", "<cmd>Telescope git_files<cr>", { desc = 
 -- Find with Grep (Root Dir)
 vim.keymap.set('n', '<leader>/', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end, { desc = "Find file with grep" })
+end, { desc = "find file with grep" })
