@@ -48,15 +48,13 @@ vim.keymap.set("n", "<leader>gb", function() Snacks.git.blame_line() end, { desc
 vim.keymap.set("n", "<leader>gf", function() Snacks.lazygit.log_file() end, { desc = "Lazygit Current File History" })
 vim.keymap.set("n", "<leader>gl", function() Snacks.lazygit.log() end, { desc = "Lazygit Log (cwd)" })
 vim.keymap.set("n", "<leader>un", function() Snacks.notifier.hide() end, { desc = "Dismiss All Notifications" })
-vim.keymap.set("n", "<c-/>", function() Snacks.terminal() end, { desc = "Toggle Terminal" })
-vim.keymap.set("n", "<c-_>", function() Snacks.terminal() end, { desc = "which_key_ignore" })
 
 -- move to next and prev {
 vim.keymap.set({ "n", "t" }, "]]", function() Snacks.words.jump(vim.v.count1) end, { desc = "Next Reference" })
 vim.keymap.set({ "n", "t" }, "[[", function() Snacks.words.jump(-vim.v.count1) end, { desc = "Prev Reference" })
 
 --- Oil Keymaps ---
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>e", ":Oil --float<CR>", { desc = "Open parent directory" })
 
 --- Telescope Keymaps ---
 local builtin = require('telescope.builtin')
@@ -73,3 +71,7 @@ vim.keymap.set("n", "<leader><space>", "<cmd>Telescope git_files<cr>", { desc = 
 vim.keymap.set('n', '<leader>/', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end, { desc = "find file with grep" })
+
+--- ToggleTerm ---
+vim.keymap.set("t", "<leader>t", [[<C-\><C-n>:ToggleTerm<CR>]], { desc = "Exit Toggle Term" })
+vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Floating Terminal" })
