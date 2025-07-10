@@ -1,5 +1,5 @@
-[terminal.shell]
-program = "wsl"
+# [terminal.shell]
+# program = "wsl"
 
 [window]
 decorations = "Full"
@@ -7,21 +7,29 @@ startup_mode = "Windowed"
 dynamic_title = true
 padding = { x = 10, y = 10 }
 dynamic_padding = false
-dimensions = { columns = 165, lines = 39 }
+dimensions = { columns = 265, lines = 80}
 
 [env]
 TERM = "xterm-256color"
 
+############################################
+#################### FONT ##################
+############################################
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Regular"
 
-[[keyboard.bindings]]
-chars = "\u001B[13;2u"
-key = "Return"
-mods = "Shift"
+[font.italic]
+family = "Iosevka Nerd Font"
+style = "Italic"
 
-[[keyboard.bindings]]
-chars = "\u001B[13;5u"
-key = "Return"
-mods = "Control"
+[font.bold]
+family = "Iosevka Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Iosevka Nerd Font"
+style = "Bold Italic"
+
+[font]
+size = 15
