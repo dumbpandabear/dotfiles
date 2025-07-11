@@ -22,7 +22,10 @@ echo "🔧 Installing Iosevka Nerd Font..."
 brew install --cask font-iosevka-nerd-font
 
 echo "🔧 Installing nvim, stow, neofetch, tmux, lazygit, amethyst"
-brew install nvim stow neofetch tmux lazygit amethyst
+brew install nvim stow neofetch tmux lazygit amethyst npm
+
+echo "🔧 Installing anthropic-ai/claude-code"
+npm install -g @anthropic-ai/claude-code
 
 # 3. Create ~/.hushlogin if it doesn’t exist
 echo "🧘 Creating ~/.hushlogin to suppress 'Last login'..."
