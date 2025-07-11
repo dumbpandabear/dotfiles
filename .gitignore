@@ -1,0 +1,5 @@
+# Ignore all *-lock.json files
+*-lock.json
+
+# Ignore all .env files
+*.env
